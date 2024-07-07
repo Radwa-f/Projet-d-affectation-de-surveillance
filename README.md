@@ -4,12 +4,12 @@ Next.js pour le front-end et Django pour le back-end.
 
 Avant de faire fonctionner les deux serveurs back et front, telecharger la base de donnée sur votre locale et faire fonctionner le serveur que vous utiliser (Xampp ou Wampp).
 
-Pour faire fonctionner le back-end on effectuer ces commandes l'une apres l'autre selon l'ordre apres d'etre localiser dans le repertoire "Plateforme" sur votre terminal (ou cmd):
+Pour faire fonctionner le back-end on effectuer ces commandes l'une apres l'autre selon l'ordre apres d'etre localiser dans le repertoire "Back-End" sur votre terminal (ou cmd):
 
 Sur MacOs:
 
-1- #python3 --version ou #python3 --version 
-Si selon quel version de python vous trouver vous allez l'utiliser pour les commandes qui suivent.
+1- #python3 --version ou #python --version 
+Selon quel version de python vous trouvez, vous allez l'utiliser pour les commandes qui suivent.
 Ajouter python à vos variables d'environement.
 
 2- #python(3) -m venv env 
@@ -25,7 +25,7 @@ Le back-end est un projet de Django, il faut être installer bien sur.
 6- #pip install djangorestframework
 7- #pip install django-cors-headers
 8- #pip install scipy 
-On installe les differents dependencies et librairies utiliser dans le projet.
+On installe les differents dependences et librairies utilisées dans le projet.
 
 9- #pip install mysqlclient 
 Ajouter mysqlclient à vos variable d'environement
@@ -36,7 +36,7 @@ On fait fonctionner le serveur.
 
 Sur Windows:
 
-1- #python3 --version ou #python3 --version 
+1- #python3 --version ou #python --version 
 Ajouter python à vos variables d'environement.
 
 2- #python(3) -m venv env 
@@ -52,7 +52,7 @@ C'est la seule commande qui differt de MacOs.
 Même chose, on installe les differents dépendances et librairies utiliser dans le projet aussi.
 
 9- #pip install mysqlclient 
-Ajouter mysqlclient à vos variable d'environement
+Ajouter mysqlclient à vos variables d'environement
 
 10- #python3 manage.py runserver
 On fait fonctionner le serveur.
@@ -70,7 +70,7 @@ Installer Tailwind CSS et ses dépendances.
 
 4- #npm run dev
 On fait fonctionner le serveur. 
-Si vous faite face à une erreur de fonctionner, il faudra intaller quelque librairies de react seulement, ils seront afficher dans votre erreur.
+Si vous faite face à une erreur de fonctionnement, il faudra seulement intaller quelques librairies de react, ils seront afficher dans votre erreur.
 
 
 ## Support

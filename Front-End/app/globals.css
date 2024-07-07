@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  top: 0; 
+  width: 100%; /* Full width */
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.modal {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ z-index: 1000;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+ background-color: #fefefe;
+ margin: auto;
+ border: 1px solid #888;
+ width: 800px;
+ height: 600px;
+}
+
+.login_form{
+  width: 40%;
+}
+
+.Ensaj_img {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('/ensa.jpeg');
+  background-size: cover;
+  margin-left: 10%;
+}
+
+.Ensaj_img_pass{
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('/ensaP.jpeg');
+  background-size: cover;
+  margin-right: 10%;
+}
+
+.forget_pass_form{
+  width: 30%;
+  margin-right: 100px;
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter;
+}
+.linearGradient{
+  background: linear-gradient(97deg, #4066ff 4%, #2949c6 100%);
+}
+
+.shadow-x1 {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+}
+
+.rounded-1g {
+  border-radius: 3px; /* Adjust the value (e.g., 8px) to change the radius */
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #3B82F6, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contactForm button {
+  padding: 10px;
+  color: #fff;
+  background-color: #1d4ed8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.contactForm button:hover {
+  background-color: #017afa;
+}
+
+
+/* General styles */
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+ }
+ 
+ .day-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+ }
+ 
+ .input-group {
+  margin-bottom: 10px;
+ }
+ 
+ .error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+ }
+ 
+ /* Styling for buttons */
+ .bold-20 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+ }
+ 
+ 
+ /* Styling for form elements */
+ .form-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ }
+ 
+ .form-input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+ }
+ 
+ /* Styling for checkboxes */
+ .form-checkbox {
+  margin-right: 10px;
+ }
+ 
+
+ .interesting-button {
+  background-color:  #5019b6; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.interesting-button:hover {
+  background-color: #1620d4; /* Darker shade of blue on hover */
+}
+@layer utilities {
+
+  .rounded_button {
+    @apply flexCenter gap-2 mx-2 rounded-full border w-[180px] h-[40px] cursor-pointer
+  }
+  .rounded_button_admin {
+    @apply flexCenter gap-2 mx-2 rounded-full border w-[280px] h-[40px] cursor-pointer
+  }
+
+  .button_text {
+    @apply font-[500] whitespace-nowrap cursor-pointer
+  }
+  .btn_white_rounded  { 
+    @apply shadow bg-white px-6 py-3 text-gray-90 transition-all hover:bg-black hover:text-white duration-300
+  }
+  .btn_blue_rounded { 
+    @apply  border-blue-500 bg-blue-500 px-6 py-3 text-white hover:bg-blue-700 duration-300
+  }
+  .btn_blue { 
+    @apply  rounded-2xl bg-blue-500 px-6 py-3 text-white
+  }
+  .btn_dark_rounded { 
+    @apply shadow bg-green-90 px-40 py-8 text-white transition-all hover:bg-white hover:text-black transform hover:-translate-y-1.5 hover:duration-200 duration-1000
+  }
+  .btn_dark_rounded1 { 
+    @apply shadow bg-green-90 px-20 py-4 text-white transition-all hover:bg-white hover:text-black transform hover:-translate-y-1.5 hover:duration-200 duration-1000
+  }
+
+  .btn_light_rounded { 
+    @apply shadow bg-white px-40 py-8 text-black transition-all hover:bg-black hover:text-white transform hover:-translate-y-1.5 hover:duration-200 duration-1000
+  }
+  .btn_light_rounded1 { 
+    @apply shadow bg-white px-6 py-3 text-black transition-all hover:bg-black hover:text-white transform hover:-translate-y-1.5 hover:duration-200 duration-1000
+  }
+
+  .btn_dark { 
+    @apply  rounded-2xl bg-green-90 px-6 py-3 text-white transition-all hover:bg-black
+  }
+  
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 3xl:px-0;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  /* FONTS */
+  .regular-64 {
+    @apply text-[64px] font-[400] leading-[120%];
+  }
+
+  .regular-52 {
+    @apply text-[52px] font-[400] leading-[120%];
+  }
+
+  .regular-40 {
+    @apply text-[40px] font-[400] leading-[120%];
+  }
+
+  .regular-32 {
+    @apply text-[32px] font-[400];
+  }
+
+  .regular-24 {
+    @apply text-[24px] font-[400];
+  }
+
+  .regular-20 {
+    @apply text-[20px] font-[400];
+  }
+
+  .regular-18 {
+    @apply text-[18px] font-[400];
+  }
+
+  .regular-16 {
+    @apply text-[16px] font-[400];
+  }
+
+  .regular-14 {
+    @apply text-[14px] font-[400];
+  }
+
+  .medium-14 {
+    @apply text-[14px] font-[600];
+  }
+
+  .bold-88 {
+    @apply text-[88px] font-[700] leading-[120%];
+  }
+
+  .bold-64 {
+    @apply text-[64px] font-[700] leading-[120%];
+  }
+
+  .bold-52 {
+    @apply text-[52px] font-[700] leading-[120%];
+  }
+  .bold-48 {
+    @apply text-[48px] font-[700] leading-[120%];
+  }
+
+  .bold-40 {
+    @apply text-[40px] font-[700] leading-[120%];
+  }
+
+  .bold-32 {
+    @apply text-[32px] font-[700] leading-[120%];
+  }
+  .bold-28 {
+    @apply text-[28px] font-[700] leading-[120%];
+  }
+
+  .bold-22 {
+    @apply text-[22px] font-[600];
+  }
+  .bold-20 {
+    @apply text-[20px] font-[600];
+  }
+
+  .bold-18 {
+    @apply text-[18px] font-[700];
+  }
+
+  .bold-16 {
+    @apply text-[16px] font-[700];
+  } 
+  @keyframes changeColor {
+    0% { border-color: rgb(125, 125, 204); }
+    25% { border-color: rgb(129, 65, 65); }
+    50% { border-color: rgb(170, 251, 170); }
+    75% { border-color: rgb(86, 221, 212); }
+    100% { border-color: rgb(226, 157, 231); }
+}
+
+.modal-content {
+    border-width: 3px;
+    border-style: solid;
+    animation: changeColor 10s infinite; 
+}
+
+}
+.TitlePlanning {
+  /* Add your styles for the form container here */
+  background-color: #f3f4f6; /* Light gray background */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin: 0 auto; /* Center the form horizontally */
+  margin-top: 20px;
+  max-width: 400px; /* Limit the width of the form */
+}
+
+/* Style for the label */
+.label {
+  /* Add your styles for the label here */
+  color: #2e4ac8; /* Blue color */
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+.filiere, .salle, .examen, .crenau {
+  /* Add your styles for the input field here */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.submit {
+  /* Add your styles for the submit button here */
+  background-color: #3149b3; 
+  border: none; /* No border */
+  color: white; /* White text color */
+  padding: 5px 10px; /* Padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor pointer */
+  border-radius: 4px; /* Rounded corners */
+  margin: 5px;
+}
+
+/* Style for the submit button on hover */
+.submit:hover {
+  background-color: #29335f; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.plus {
+  background-color: #799abd; /* Blue background color */
+  color: rgb(16, 8, 8); /* White text color */
+  border: none; /* No border */
+  padding: 6px 12px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  border-radius: 50%; /* Make it round */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  font-weight: bold;
+  
+}
+
+.plus:hover {
+  background-color: #345579; /* Darker blue on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.Planning {
+  padding: 30px;
+  background-color: #bed7ed;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.Planning:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.content:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logoutbut {
+  background-color: #f87171; /* Red */
+    color: #ffffff; /* White */
+    font-weight: 600;
+    font-size: 0.9rem; /* Adjust the font size */
+    padding: 0.5rem 1rem; /* Adjust padding to make the button smaller */
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.logoutbut:hover {
+  background-color: #ef4444; /* Lighter Red */
+    transform: translateY(-1px); /* Adjust hover effect */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logoutbut:focus {
+  outline: none;
+}
+
+.bg-sky-blue {
+  background-color: #fbfbfd; 
+}
+
+.custom-sidebar {
+  background-color: white !important;
+
+  height: 100vh;
+}

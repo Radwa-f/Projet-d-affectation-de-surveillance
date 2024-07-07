@@ -1,0 +1,8 @@
+{% block content %}
+    <h2>Assignments</h2>
+    <ul>
+    {% for assignment in assignments %}
+        <li>{{ assignment.exam.subject }} - {{ assignment.exam.day_of_week }} {{ assignment.exam.hour }} - {{assignment.surveillant}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
